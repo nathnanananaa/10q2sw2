@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<style>
+   body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #f7f9fc, #dbe9ff);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            background: rgb(191, 217, 255);
+            padding: 25px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 450px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2a4d8f;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px 10px;
+            vertical-align: middle;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #2a4d8f;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            background-color: #2a4d8f;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #1c3570;
+        }
+
+        hr {
+            margin: 20px 0;
+        }
+
+        #student_info, #summary, #output {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        #output {
+            font-weight: bold;
+            color: #2a4d8f;
+        }
+    </style>
+</style>
+<body>
+    <div class="container">
+    <h1>Student Grade Calculator</h1>
+
+    <label>First Name:</label>
+    <input id="fname" required>
+    <br><br>
+    <br><br>
+    <label>Last Name:</label>
+    <input id="lname" required>
+    <br><br>
+    <br><br>
+    <label>Science:</label>
+    <input id="science" type="number">
+    <br><br>
+    <label>Math:</label>
+    <input id="math" type="number">
+    <br><br>
+    <label>English:</label>
+    <input id="english" type="number">
+    <br><br>
+    <label>Filipino:</label>
+    <input id="filipino" type="number">
+    <br><br>
+    <label>ICT:</label>
+    <input id="ict" type="number">
+    <br><br>
+    <label>PE:</label>
+    <input id="pe" type="number">
+    <br><br>
+    <button py-click="general_weighted_average">Calculate GWA</button>
+   
+    <hr>
+
+    <div id="student_info"></div>
+    <div id="summary"></div>  
+    <div id="output" class="mt-3 text-center"></div>
+ </div>
+    <script type="py" src="main.py"></script>
+</body>
+</html>
